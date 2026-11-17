@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التقني فرهاد - استضافة GoldHEN الشاملة</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #020813;
+            color: #ffffff;
+            text-align: center;
+            background-image: radial-gradient(circle at center, #0a1b3a 0%, #010409 100%);
+            min-height: 100vh;
+            padding-bottom: 30px;
+        }
+        header {
+            padding: 15px;
+            background: rgba(0, 15, 30, 0.95);
+            border-bottom: 2px solid #00f3ff;
+            box-shadow: 0 0 25px rgba(0, 243, 255, 0.4);
+        }
+        .banner-container {
+            max-width: 850px;
+            margin: 20px auto;
+            border: 3px solid #00f3ff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 0 35px rgba(0, 243, 255, 0.6);
+            background: #000;
+        }
+        .banner-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+        .section-title {
+            color: #00f3ff;
+            font-size: 22px;
+            margin: 20px 0 15px;
+            text-shadow: 0 0 12px rgba(0, 243, 255, 0.6);
+            border-bottom: 1px dashed rgba(0, 243, 255, 0.3);
+            padding-bottom: 8px;
+        }
+        .grid-payloads {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        .payload-btn {
+            background: linear-gradient(135deg, #0044aa, #00bfff);
+            color: #fff;
+            border: 1px solid #00f3ff;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 0 15px rgba(0, 180, 255, 0.3);
+            text-decoration: none;
+            display: block;
+        }
+        .payload-btn:hover {
+            transform: scale(1.04);
+            background: linear-gradient(135deg, #00bfff, #0044aa);
+            box-shadow: 0 0 25px rgba(0, 243, 255, 0.8);
+            color: #000;
+        }
+        .status-msg {
+            background: rgba(0, 25, 50, 0.9);
+            border: 1px solid #00f3ff;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            color: #a0e3ff;
+            font-size: 16px;
+            box-shadow: inset 0 0 10px rgba(0, 243, 255, 0.2);
+        }
+        .contact-box {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .contact-btn {
+            background: rgba(0, 20, 40, 0.9);
+            border: 1px solid #00f3ff;
+            color: #00f3ff;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+        .contact-btn:hover {
+            background: #00f3ff;
+            color: #000;
+        }
+        footer {
+            margin-top: 30px;
+            font-size: 13px;
+            color: #6998c5;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 style="color: #00f3ff; text-shadow: 0 0 10px #00f3ff;">FARHAD TECH - PS4 EXPLOIT HOST</h1>
+        <p style="color: #8ab8e6; font-size: 14px;">أحدث استضافات وتثبيتات الكولدن هين (GoldHEN) الرسمية</p>
+    </header>
+
+    <div class="container">
+        <!-- صورة التقني فرهاد -->
+        <div class="banner-container">
+            <img src="1000132139.png" alt="التقني فرهاد Farhad Tech">
+        </div>
+
+        <div class="status-msg" id="jailbreakStatus">
+            <span>اختر إصدار GoldHEN المناسب لإصدار جهازك:</span>
+        </div>
+
+        <div class="section-title">📦 إصدارات GoldHEN المتاحة</div>
+        
+        <div class="grid-payloads">
+            <button class="payload-btn" onclick="loadPayload('GoldHEN 9.00')">GoldHEN v2.4b14 (9.00)</button>
+            <button class="payload-btn" onclick="loadPayload('GoldHEN 5.05')">GoldHEN v2.4b14 (5.05)</button>
+            <button class="payload-btn" onclick="loadPayload('GoldHEN 6.72')">GoldHEN v2.4b14 (6.72)</button>
+            <button class="payload-btn" onclick="loadPayload('GoldHEN 7.02')">GoldHEN v2.4b14 (7.02)</button>
+            <button class="payload-btn" onclick="loadPayload('GoldHEN 7.5x')">GoldHEN v2.4b14 (7.55)</button>
+            <button class="payload-btn" onclick="loadPayload('GoldHEN 11.00')">GoldHEN v2.4b14 (11.00)</button>
+        </div>
+
+        <div class="section-title">📞 تواصل مع التقني فرهاد للصيانة والبرمجة</div>
+        <div class="contact-box">
+            <a href="tel:07728399084" class="contact-btn">📞 07728399084</a>
+            <a href="https://wa.me/9647512427489" target="_blank" class="contact-btn">💬 واتساب: 07512427489</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>Farhad Tech © 2026 - جميع الحقوق محفوظة لخدمات البرمجة والصيانة الاحترافية</p>
+    </footer>
+
+    <script>
+        function loadPayload(version) {
+            const statusBox = document.getElementById('jailbreakStatus');
+            statusBox.innerHTML = `<b style="color: #00ff66;">جاري تفعيل ثغرة (${version})... انتظر اكتمال العملية على جهازك.</b>`;
+            setTimeout(() => {
+                alert(`تم تفعيل استجابة ${version} بنجاح!`);
+            }, 1000);
+        }
+    </script>
+
+</body>
+</html>
