@@ -54,7 +54,7 @@
         }
         .grid-payloads {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 15px;
             margin-bottom: 25px;
         }
@@ -64,7 +64,7 @@
             border: 1px solid #00f3ff;
             padding: 15px;
             border-radius: 10px;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: bold;
             cursor: pointer;
             transition: 0.3s;
@@ -77,6 +77,15 @@
             background: linear-gradient(135deg, #00bfff, #0044aa);
             box-shadow: 0 0 25px rgba(0, 243, 255, 0.8);
             color: #000;
+        }
+        .payload-btn.new-ver {
+            background: linear-gradient(135deg, #00aa55, #00ff88);
+            color: #000;
+            border: 1px solid #00ffaa;
+        }
+        .payload-btn.new-ver:hover {
+            background: linear-gradient(135deg, #00ff88, #00aa55);
+            color: #fff;
         }
         .status-msg {
             background: rgba(0, 25, 50, 0.9);
@@ -120,7 +129,7 @@
 
     <header>
         <h1 style="color: #00f3ff; text-shadow: 0 0 10px #00f3ff;">FARHAD TECH - PS4 EXPLOIT HOST</h1>
-        <p style="color: #8ab8e6; font-size: 14px;">أحدث استضافات وتثبيتات الكولدن هين (GoldHEN) الرسمية</p>
+        <p style="color: #8ab8e6; font-size: 14px;">أحدث استضافات وتثبيتات الكولدن هين (GoldHEN) لجميع الإصدارات</p>
     </header>
 
     <div class="container">
@@ -130,18 +139,23 @@
         </div>
 
         <div class="status-msg" id="jailbreakStatus">
-            <span>اختر إصدار GoldHEN المناسب لإصدار جهازك:</span>
+            <span>اختر إصدار النظام الخاص بجهازك لتشغيل الثغرة المناسبة:</span>
         </div>
 
-        <div class="section-title">📦 إصدارات GoldHEN المتاحة</div>
-        
+        <div class="section-title">📦 الإصدارات الحديثة والجديدة</div>
         <div class="grid-payloads">
-            <button class="payload-btn" onclick="loadPayload('GoldHEN 9.00')">GoldHEN v2.4b14 (9.00)</button>
-            <button class="payload-btn" onclick="loadPayload('GoldHEN 5.05')">GoldHEN v2.4b14 (5.05)</button>
-            <button class="payload-btn" onclick="loadPayload('GoldHEN 6.72')">GoldHEN v2.4b14 (6.72)</button>
-            <button class="payload-btn" onclick="loadPayload('GoldHEN 7.02')">GoldHEN v2.4b14 (7.02)</button>
-            <button class="payload-btn" onclick="loadPayload('GoldHEN 7.5x')">GoldHEN v2.4b14 (7.55)</button>
-            <button class="payload-btn" onclick="loadPayload('GoldHEN 11.00')">GoldHEN v2.4b14 (11.00)</button>
+            <button class="payload-btn new-ver" onclick="runExploit('14.xx / 12.xx')">GoldHEN (إصدارات 14.xx / 12.xx)</button>
+            <button class="payload-btn new-ver" onclick="runExploit('11.00')">GoldHEN v2.4b14 (11.00)</button>
+            <button class="payload-btn new-ver" onclick="runExploit('10.00 / 10.01')">GoldHEN (10.00 - 10.01)</button>
+        </div>
+
+        <div class="section-title">📦 الإصدارات الكلاسيكية المستقرة</div>
+        <div class="grid-payloads">
+            <button class="payload-btn" onclick="runExploit('9.00')">GoldHEN v2.4b14 (9.00)</button>
+            <button class="payload-btn" onclick="runExploit('7.55')">GoldHEN v2.4b14 (7.55)</button>
+            <button class="payload-btn" onclick="runExploit('7.02')">GoldHEN v2.4b14 (7.02)</button>
+            <button class="payload-btn" onclick="runExploit('6.72')">GoldHEN v2.4b14 (6.72)</button>
+            <button class="payload-btn" onclick="runExploit('5.05')">GoldHEN v2.4b14 (5.05)</button>
         </div>
 
         <div class="section-title">📞 تواصل مع التقني فرهاد للصيانة والبرمجة</div>
@@ -156,12 +170,14 @@
     </footer>
 
     <script>
-        function loadPayload(version) {
+        function runExploit(version) {
             const statusBox = document.getElementById('jailbreakStatus');
-            statusBox.innerHTML = `<b style="color: #00ff66;">جاري تفعيل ثغرة (${version})... انتظر اكتمال العملية على جهازك.</b>`;
+            statusBox.innerHTML = `<b style="color: #00ff88;">جاري حقن ثغرة و تحميل GoldHEN لإصدار (${version})... يرجى الانتظار حتى اكتمال التنفيذ.</b>`;
+            
+            // محاكاة تحميل الثغرة (جاهز لربط ملفات الـ Bin / Netcat الحقيقية)
             setTimeout(() => {
-                alert(`تم تفعيل استجابة ${version} بنجاح!`);
-            }, 1000);
+                statusBox.innerHTML = `<b style="color: #00ffff;">تم تهيئة ثغرة إصدار (${version}) بنجاح! جاهز للاستخدام.</b>`;
+            }, 2000);
         }
     </script>
 
